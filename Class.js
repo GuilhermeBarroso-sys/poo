@@ -1,17 +1,24 @@
-class hero {
-    constructor(){
-        this.name = '',
-        this.health = 0,
-        this.atk = 0;
+class Hero {
+    constructor(name,health,atk){
+        this.name = name,
+        this.health = health,
+        this.atk = atk;
     }
 
-    Atk() {
-        console.log("Atk!");
-    }
     jump() {
         console.log("Jumping!");
+    }
+    hit() {
+        console.log(`
+            hit! Dmg: ${this.atk}
+        `);
     }
     walk() {
         console.log("Walking!");
     }
 }
+
+var vision = new Hero();
+var wanda = new Hero("Wanda", 5, 15);
+
+console.log(wanda.atk);
